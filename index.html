@@ -6,28 +6,190 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
 
 </head>
 
 <body>
-    <h1>Deportista</h1>
-    <center>
-        <table id="calendar" border="2">
+    <h1>REGISTRO DE CITA</h1>
+    <form action="registrar.php" method="POST" class="form-register" onsubmit="return validar();">
+        <h2 class="form__titulo">Datos De Paciente</h2>
+        <div class="contenedor-inputs">
+            <input type="text" name="nombre" placeholder="Nombre" class="input-48" required>
+            <input type="text" name="apellido" placeholder="Apellido" class="input-48" required>
+            <input type="text" name="cedula" placeholder="Cédula" class="input-48" required>
+            <input type="text" name="telefono" placeholder="Teléfono" class="input-48" required>
+            <input type="email" name="correo" placeholder="Correo" class="input-100" required>
 
-            <tr>
-                <th>Lunes</th>
-                <tab>
-                    <th>Martes</th>
-                    <th>Miercoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sabado</th>
-                    <th>Domingo</th>
-                </tr>
+            <select name=" list_dias " onChange="combo(this, 'demo')" class="input-comboxdias">
+                <option>Dia</option>
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miercoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+            </select>
+            <select name="list_meses" onChange="combo(this, 'demo')" class="input-comboxmes">
+                <option>Mes</option>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+            </select>
+            <div class="form__calendario">
+                <table class="default" border="1">
 
-            </tr>
-        </table>
-    </center>
+                    <tr>
+
+                        <th scope="row">Horas</th>
+
+                        <th>Espe1</th>
+                        <th>Espe2</th>
+                        <th>Espe3</th>
+                        <th>Espe4</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>8:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>9:00</th>
+
+                        <td>19°C</td>
+
+                        <td>17°C</td>
+
+                        <td>12°C</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>10:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>11:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>12:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>13:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>14:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>15:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+                    <tr>
+
+                        <th>16:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+                    <tr>
+
+                        <th>17:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+                    <tr>
+
+                        <th>18:00</th>
+
+                        <td>E 13 km/h</td>
+
+                        <td>E 11 km/h</td>
+
+                        <td>S 16 km/h</td>
+
+                    </tr>
+
+                </table>
+            </div>
+            <br><br><br><br><br><br><br><br>
+            <input type="submit" value="Registrar" class="btn-enviar" required>
+            <p class="form__link">Salir de la pagina registro<a href="#"> Clic aqui</a></p>
+
+        </div>
+    </form>
+
+
 </body>
 
 </html>
